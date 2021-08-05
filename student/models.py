@@ -8,15 +8,28 @@ class Student(models.Model):
     date_of_birth=models.DateField(max_length=10)
     roll_number=models.CharField(max_length=10)
     student_email=models.EmailField(max_length=25)
-    nationality=models.CharField(max_length=15)
+    nationality_choices=(
+    ("Kenyan","Kenyan"),
+    ("Ugandan","Ugandan"),
+    ("Rwandeese","Rwandees"),
+    ("South Sudaneese","South Sudaneese"))
+    nationality=models.CharField(max_length=15,choices=nationality_choices)
     student_id=models.CharField(max_length=18)
     id_number=models.CharField(max_length=18)
-    gender=models.CharField(max_length=6)
+    gender_choices=(
+        ("Female","Female"),
+        ("Male","Male")
+    )
+    gender=models.CharField(max_length=6,choices=gender_choices)
     phone_number=models.CharField(max_length=16)
     county=models.CharField(max_length=12)
     profile=models.ImageField()
     medical_report=models.FileField()
     date_of_enrollment=models.DateField(max_length=8)
     course_name=models.CharField(max_length=10)
-    language=models.CharField(max_length=10)
+    language_choices=(
+        ("English","English"),
+        ("Kiswahili","Kiswahili")
+    )
+    language=models.CharField(max_length=10,choices=language_choices)
     serial_number=models.CharField(max_length=10)
