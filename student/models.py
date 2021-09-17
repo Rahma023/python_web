@@ -23,13 +23,17 @@ class Student(models.Model):
     gender=models.CharField(max_length=6,choices=gender_choices)
     phone_number=models.CharField(max_length=16)
     county=models.CharField(max_length=12)
-    profile=models.ImageField()
-    medical_report=models.FileField()
+    profile=models.ImageField(upload_to="media")
+    medical_report=models.FileField(upload_to="media")
     date_of_enrollment=models.DateField(max_length=8)
-    course_name=models.CharField(max_length=10)
+    # course_name=models.CharField(max_length=10)
     language_choices=(
         ("English","English"),
         ("Kiswahili","Kiswahili")
     )
     language=models.CharField(max_length=10,choices=language_choices)
-    serial_number=models.CharField(max_length=10)
+
+    # serial_number=models.CharField(max_length=10, blank=True, null=True)
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"

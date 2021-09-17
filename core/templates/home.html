@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    {% load static %}
+    <title>codeHive Programme</title>
+</head>
+<body>
+    <style>
+  .landing-section {
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+}
+ .landing-main { 
+      background: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80) no-repeat center center fixed; 
+      background-size: cover;
+}
+
+.landing-section-content {
+  padding: 2rem;
+  background: rgba(0,0,0,0.5);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ccc;
+}
+
+.brand {
+  margin: 0;
+  color: purple;
+}
+
+.brand-text {
+  color: purple;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  background: rgba(0,0,0,0.5);
+}
+
+.header-link {
+  margin: 1rem;
+  border-bottom: 3px solid purple;
+  font-size: 1.2rem;
+  color: #222;
+  text-decoration: none;
+  color: #495057;
+}
+
+.header-text {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+    </style>
+    <header class="header">
+        <div class="header-text">codeHive Application 2022</div>
+        <a href="student/list" class="header-link">Student</a>
+        <a href="trainers/list" class="header-link">Trainer</a>
+        <a href="course/list" class="header-link">Course</a>
+        <a href="cal/calendar" class="header-link">School Events</a>
+
+
+      </header>
+    <!-- <h1>Students: {{ students}}</h1>
+    <h1>trainers: {{ trainers}}</h1>
+    <h1>course: {{course}}</h1>
+    <h1>events: {{events}}</h1> -->
+
+    <section class="landing-section landing-main">
+        <h1 class="brand">AkiraChix</h1>
+        <h2>
+          <span class="brand-text">codeHive Programme</span>
+          <!-- <span class="brand-text">Notifications</span> -->
+        </h2>
+        
+        <!-- <p class="landing-main-text">
+          Got tired of missing out on releases from your favourite artists?
+          <br>
+          You have found a perfect solution...
+        </p> -->
+      </section>
+
+      <section class="landing-section langing-features">
+        <section class="landing-feature feature-music-services">
+          <h2>Building the World's Leading African Female <span class="brand-text">Tech</span> Talent</h2>
+          <ul>
+            <li><a href="student/list" class="header-link">Student</a></li>
+            <li><a href="trainers/list" class="header-link">Trainer</a>
+            </li>
+            <li><a href="course/list" class="header-link">Course</a></li>
+            <li><a href="cal/calendar" class="header-link">School Events</a></li>
+          </ul>
+        </section>
+        <section class="landing-feature feature-notifications">
+          <h2>Get <span class="brand-text">n</span>otifications wherever you want them</h2>
+          <ul>
+            <li>Email: info@akirachix.com</li>
+            <li>Address: P.O.BOX 22009-00100, Nairobi</li>
+            <li>Location: 616 Korongo Road, off Ndege Road</li>
+          </ul>
+        </section>
+      </section>
+    
+</body>
+</html>

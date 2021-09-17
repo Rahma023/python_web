@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Form</title>
+</head>
+<body>
+    {% block title %}
+
+{% endblock %}
+
+{% block content %}
+<div>
+<form method="post">
+    <h1>Events</h1>
+  {% csrf_token %}
+  <table class="form form-table">
+    {{ form.as_table }}
+  </table>
+  <!-- <input class="btn btn-success" type="submit" value="Submit" style=" background-color: purple; border-radius: 10px; width: 100%;"> -->
+  <button>Submit</button>
+
+
+</form>
+{% endblock %}
+</div>
+
+<style>
+    /* select{
+        width: 100%;
+        border-radius: 10px;
+        font-size: 15px;
+        border: 1px solid;
+        padding: 8px 10px;
+        border:purple;
+
+    } */
+    select{
+           width: 100%;
+           padding: 8px 10px;
+           border-radius: 3px;
+           transition: all 0.3;
+       }
+
+h1{
+color:purple;
+text-align: center;
+/* padding-top: 20px; */
+
+}
+img{
+margin-left: 130px;
+width: 400px;
+}
+form{
+text-align: center;
+padding-top: 20px;
+
+color:purple;
+}
+
+.btn btn-success{
+color: purple;
+}
+div {
+border-radius: 10px;
+background-color:wheat;
+padding: 20px;
+width: 700px;
+margin-left: 400px;
+
+
+}
+body{
+background-color:#eee;
+}
+button{
+          background-color:rgb(194, 149, 194);
+          top: 2px;
+          height: 40px;
+          width :50%;
+          border-radius: 5px;
+          align-items: center;
+          font-size: 1.4rem;
+      }
+      button:hover{
+          color: wheat;
+          background-color: purple;
+          cursor: pointer;
+      }
+</style>
+
+
+</body>
+</html>

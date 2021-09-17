@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>events_list</title>
+</head>
+<body>
+<table>
+
+<tr>
+<th>Event Name</th>
+<th>Event date and time</th>
+<th>Event id</th>
+<th>Event duration</th>
+<th>Event signed by</th>
+<th>Event approved by</th>
+<th>Event participants</th>
+
+</tr>
+<tr>
+{%for event in events%}
+
+<td>{{event.event_name}}</td>
+<td>{{event.event_date_and_time}}</td>
+<td>{{event.event_id}}</td>
+<td>{{event.event_duration}}</td>
+<td>{{event.event_signed_by}}</td>
+<td>{{event.event_approved_by}}</td>
+<td>{{student.event_participants}}</td>
+
+</tr>
+{% endfor %}
+</table>
+
+<!-- <style>
+#t01{
+ width: 100%;
+            }
+    table,th,td{
+    border: 1px solid;
+                color: black;
+
+</style> -->
+<style>
+    #t01{
+                    width: 100%;
+                }
+                table,th,td{
+                    color: rgb(95, 2, 59);
+                    width: 70px;
+                    height: 50px;
+                    padding: 20px 0px 0px 5px;
+                    border: 1px solid purple;
+                }
+    </style>
+   
+</body>
+</html>

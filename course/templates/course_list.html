@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>course-form-list</title>
+</head>
+<body>
+<table>
+
+<tr>
+<th>Course Name</th>
+<th>Course Trainer</th>
+<th>Duration of course</th>
+<th>Schedule of course</th>
+<th>Course code</th>
+<th>Course syllabus</th>
+<!-- <th>Course description</th> -->
+<th>Update</th>
+<th>Edit</th>
+
+</tr>
+<tr>
+    {% for courses in course %}
+
+<td>{{courses.course_name}}</td>
+<td>{{courses.course_trainer}}</td>
+<td>{{courses.duration_of_course}}</td>
+<td>{{courses.schedule_of_course}}</td>
+<td>{{courses.course_code}}</td>
+<td>{{courses.course_syllabus}}</td>
+<!-- <td>{{courses.course_description}}</td> -->
+<td>
+    <a href="{% url 'course_update' id=courses.id%}">Update</a>
+</td>
+<td>
+    <a href="{% url 'edit_course' id=courses.id%}">Edit</a>
+</td>
+
+</tr>
+{% endfor %}
+</table>
+
+<style>
+    /* #t01{
+                    width: 100%;
+                }
+                table,th,td{
+                    color: rgb(95, 2, 59);
+                    width: 70px;
+                    height: 50px;
+                    padding: 20px 0px 0px 5px;
+                    border: 1px solid purple;
+                    background-color: rgb(247, 238, 226);
+                } */
+
+
+                body{
+  background-color: rgb(245, 226, 191);
+}
+h1{
+  text-align: center;
+  color: purple;
+}
+table{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    table-layout:auto;
+}
+table,tr,th,td{
+    padding: 3px;
+    color:black;
+    border: 2px solid purple;
+    border-collapse: collapse;
+    font-size: 15px;
+    font-style: serif;
+    text-align: center;
+    /* margin-top: 3px; */
+}
+h1{
+    text-align: center;
+    color: purple;
+}
+th{
+  color: white;
+  background-color:purple;
+}
+    </style>
+
+   
+</body>
+</html>

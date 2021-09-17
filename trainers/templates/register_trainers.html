@@ -1,3 +1,4 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <title>Trainers-form</title>
 </head>
 <body>
     <style>
@@ -22,8 +23,8 @@
         input{
            width: 100%;
            outline: none;
-           border: 1px solid ;
-           font-size: 15px;
+           border: 2px solid ;
+           font-size: 12px;
            padding: 8px 8px;
            border-radius: 20px;
        }
@@ -36,7 +37,7 @@
        .wrapper{
       max-width: 500px;
       width: 80%;
-      background: #fff;
+      background: wheat;
       margin: 20px auto;
       padding: 30px;
       box-shadow: 1px 1px 2px rgba(0,0,0, 125);
@@ -48,12 +49,12 @@
        }
        .wrapper.wrapper.form.input_field label{
            width: 200px;
-           color: blueviolet;
+           /* color: blueviolet; */
            margin-right: 10px;
            font-size: 14px;
        }
       button{
-          background-color:rgb(226, 199, 226);
+          background-color:rgb(194, 149, 194);
           top: 30px;
           height: 50px;
           width :50%;
@@ -65,10 +66,10 @@
           background-size: contain;
           width: 80%;
           text-align: center;
-          height: 150px;
+          /* height: 150px; */
       }
       button:hover{
-          color: white;
+          color: wheat;
           background-color: purple;
           cursor: pointer;
 
@@ -78,9 +79,11 @@
        <div class="form">
     <form method="POST">
         {%csrf_token%}
-        <h1>Student Registration Form </h1>
+        <h1>Trainers' Filling Form</h1>
         {{form.as_p}}
+
         <button>Submit</button>
+        <!-- <input type="submit" value="Submit"> -->
     </form>
     </div>
     </div>
